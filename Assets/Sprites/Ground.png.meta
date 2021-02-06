@@ -7,25 +7,28 @@ TextureImporter:
     second: Ground_0
   - first:
       213: -562605217060080129
-    second: Ground_1
+    second: Road_0
   - first:
       213: -4970410492042351176
-    second: Ground_2
+    second: Road_1
   - first:
       213: -5930158604282628446
-    second: Ground_3
+    second: Road_2
   - first:
       213: -4233739483619845583
-    second: Ground_4
+    second: Road_3
   - first:
       213: -6551456632857933372
-    second: Ground_5
+    second: Road_4
   - first:
       213: 4717279005209572468
-    second: Ground_6
+    second: Road_5
   - first:
       213: -232304020389510235
-    second: Ground_7
+    second: Road_6
+  - first:
+      213: -2542073858232844238
+    second: Ground_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -156,7 +159,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground_1
+      name: Road_0
       rect:
         serializedVersion: 2
         x: 605
@@ -177,11 +180,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground_2
+      name: Road_1
       rect:
         serializedVersion: 2
         x: 1146
-        y: 1512
+        y: 1516
         width: 512
         height: 512
       alignment: 0
@@ -198,7 +201,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground_3
+      name: Road_2
       rect:
         serializedVersion: 2
         x: 64
@@ -219,7 +222,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground_4
+      name: Road_3
       rect:
         serializedVersion: 2
         x: 605
@@ -240,7 +243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground_5
+      name: Road_4
       rect:
         serializedVersion: 2
         x: 1144
@@ -261,7 +264,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground_6
+      name: Road_5
       rect:
         serializedVersion: 2
         x: 67
@@ -282,7 +285,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground_7
+      name: Road_6
       rect:
         serializedVersion: 2
         x: 605
