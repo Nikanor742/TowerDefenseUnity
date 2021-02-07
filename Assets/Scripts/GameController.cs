@@ -2,32 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameController : MonoBehaviour
+public class GameController : Loader<GameController>
 {
-    public static GameController instance = null;
+    [SerializeField]
+    GameObject spawnPoint;
+    [SerializeField]
+    GameObject[] enemies;
+    [SerializeField]
+    int maxEnemiesOnScreen;
+    [SerializeField]
+    int totalEnemies;
+    [SerializeField]
+    int enemiesPerSpawn;
 
-    public GameObject spawnPoint;
-    public GameObject[] enemies;
-    public int maxEnemiesOnScreen;
-    public int totalEnemies;
-    public int enemiesPerSpawn;
+    int enemiesOnScreen = 0;
+    const float spawnDelay = 0.7f;
 
-    private int enemiesOnScreen = 0;
-
-    private const float spawnDelay = 0.7f;
-
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else if(instance != this)
-        {
-            Destroy(gameObject);
-        }
-        DontDestroyOnLoad(gameObject);
-    }
+   
     // Start is called before the first frame update
     void Start()
     {

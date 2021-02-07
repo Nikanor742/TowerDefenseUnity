@@ -2,20 +2,22 @@
 
 public class Enemy : MonoBehaviour
 {
-    public int target = 0;
-    public Transform exit;
-    public Transform[] directionPoints;
-    public float navigation;
+    [SerializeField]
+    Transform exit;
+    [SerializeField]
+    Transform[] directionPoints;
+    [SerializeField]
+    float navigation;
 
+    int target = 0;
     Transform enemy;
     float navigationTime = 0;
-    // Start is called before the first frame update
+
     void Start()
     {
         enemy = GetComponent<Transform>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (directionPoints != null)
@@ -44,7 +46,7 @@ public class Enemy : MonoBehaviour
         }
         else if(collision.tag == "Finish")
         {
-            GameController.instance.RemoveEnemyFromScreen();
+            GameController.Instance.RemoveEnemyFromScreen();
             Destroy(gameObject);
         }
     }

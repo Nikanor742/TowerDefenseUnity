@@ -1,16 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Loader : MonoBehaviour
+public class Loader<T> : MonoBehaviour where T: MonoBehaviour
 {
-    public GameObject controller;
+    private static T instance;
 
-    private void Awake()
+    public static T Instance
     {
-        if (GameController.instance == null)
+        get
         {
-            Instantiate(controller);
+            if (instance == null)
+            {
+                instance = FindObjectOfType<T>();
+            }
+            else if (instance != FindObjectOfType<T>())
+            {
+                Destroy(FindObjectOfType<T>());
+            }
+            DontDestroyOnLoad(FindObjectOfType<T>());
+            return instance;
         }
     }
 
